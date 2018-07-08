@@ -1,0 +1,47 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+     "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "C:\\Users\\Vicki\\Anaconda3\\pythonw",
+            "args": [
+                // Ask msbuild to generate full paths for file names.
+                //"/property:GenerateFullPaths=true",
+               // "/t:build"
+                "'${file}'"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        }
+    ]
+} 
+/* "version": "2.0.0",
+"tasks": [
+        {
+            "label": "Run Python Code",
+            "type": "shell",
+            "command": "C:\\Users\\Vicki\\Anaconda3\\pythonw.exe",
+            "args": [
+                "'${file}'"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            }
+        }
+    ]
+} */
